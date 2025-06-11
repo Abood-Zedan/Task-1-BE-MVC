@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Task-1 to MVC</title>
+</head>
+<body>
+    <h1 style="text-align:center">Products</h1>
+    <div class="products">
+        @foreach (var item in Model)
+        {
+            <div class="product">
+                <h2>@item.name</h2>
+                <a href="/products/Details/@item.Id">Details</a>
+                <a href="/products/Delete/@item.Id">Delete</a>
+            </div>
+        }
+    </div>
+    <a class="btn mt-4 btn-outline-primary" href="/products/create">Create Product</a>
+    </body>
+    </html>

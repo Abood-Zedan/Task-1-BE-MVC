@@ -1,0 +1,22 @@
+﻿@model Product
+
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h2>Create Product</h2>
+        <form class="form" method="post" action="/products/add">
+            <input id="name" type="text" name="name" placeholder="Name" value="@Model.name"/>
+            <span asp-validation-for="name" class="text-danger"></span>
+            <input id="descr" type="text" name="description" placeholder="Description" value="@Model.description" />
+            <span asp-validation-for="description" class="text-danger"></span>
+            <input id="price" type="number" name="price" placeholder="Price" value="@Model.price" />
+            <span asp-validation-for="price" class="text-danger"></span>
+        <button id="btnAdd" class="btn btn-outline-success" type="submit">Add</button>
+        </form>
+
+        <a class="btn mt-4 btn-outline-danger" href="/products/index">Back</a>
+    </body>
+    </html>
